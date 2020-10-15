@@ -30,4 +30,5 @@ Senior engineers also have the responsibility of managing the team from an human
 
 h4 1.1.2 - Artists
 
-
+Content is king, they say, and is true. There are a lot of categories in art production. The objective of the technical tema is to share and convey the artistry team's job in the best way possible in a way in witch the user experience is the best possible. In this sense, there are the concept artists that create what the final game will look like, with drawings and montages. 
+ 
