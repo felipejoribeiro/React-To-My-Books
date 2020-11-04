@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
-import CardList from './CardList';
-import './index.css';
 import 'tachyons';
+import * as serviceWorker from './serviceWorker';
+
+// Autoral components:
+import App from './App.js';
+
+// Estilos para a página:
+import './index.css';
 
 ReactDOM.render(
 
   <React.StrictMode>
-    <CardList/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 
