@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from './Card';
-import { robots } from './robots.js';
 
-const CardList = () =>{
+const CardList = ({robots}) => {
   
   return(
-  <div>
+  <div> 
     {
+      //this returns list of card tags with the parameters passed
       robots.map( (user, i) => {
         return (
           <Card 
