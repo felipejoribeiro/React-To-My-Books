@@ -17,6 +17,7 @@ tabnew
 tabnew
 tabnew
 tabnew
+tabnew
 tabrewind
 edit index.js
 set splitbelow splitright
@@ -37,7 +38,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 12 - ((11 * winheight(0) + 22) / 45)
+let s:l = 12 - ((11 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -141,23 +142,50 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
+let s:l = 24 - ((23 * winheight(0) + 22) / 44)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+24
+normal! 0
+tabnext
+edit components/ErrorBoundry.js
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
 let s:l = 1 - ((0 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-tabnext 5
+tabnext 6
 set stal=1
 badd +1 index.js
-badd +0 App.js
-badd +0 Scroll.js
-badd +0 CardList.js
-badd +0 Card.js
-badd +0 containers/App.js
-badd +0 components/Scroll.js
-badd +0 components/CardList.js
+badd +1 containers/App.js
+badd +1 components/Scroll.js
+badd +1 components/CardList.js
 badd +0 components/Card.js
+badd +1 App.js
+badd +1 Scroll.js
+badd +1 CardList.js
+badd +1 Card.js
+badd +0 components/ErrorBoundry.js
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
