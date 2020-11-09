@@ -16,6 +16,7 @@ set stal=2
 tabnew
 tabnew
 tabnew
+tabnew
 tabrewind
 edit index.js
 set splitbelow splitright
@@ -36,14 +37,14 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 11 - ((10 * winheight(0) + 22) / 45)
+let s:l = 12 - ((11 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-11
-normal! 08|
+12
+normal! 0
 tabnext
-edit App.js
+edit containers/App.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -62,14 +63,14 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 22) / 45)
+let s:l = 2 - ((1 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 2
-normal! 024|
+normal! 0
 tabnext
-edit CardList.js
+edit components/Scroll.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -88,14 +89,14 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 22) / 45)
+let s:l = 1 - ((0 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
 tabnext
-edit Card.js
+edit components/CardList.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -114,18 +115,49 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 11 - ((10 * winheight(0) + 22) / 45)
+let s:l = 1 - ((0 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-11
-normal! 05|
-tabnext 2
+1
+normal! 0
+tabnext
+edit components/Card.js
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 22) / 44)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+tabnext 5
 set stal=1
-badd +0 index.js
+badd +1 index.js
 badd +0 App.js
-badd +1 CardList.js
-badd +1 Card.js
+badd +0 Scroll.js
+badd +0 CardList.js
+badd +0 Card.js
+badd +0 containers/App.js
+badd +0 components/Scroll.js
+badd +0 components/CardList.js
+badd +0 components/Card.js
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

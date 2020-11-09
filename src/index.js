@@ -4,7 +4,7 @@ import 'tachyons';
 import * as serviceWorker from './serviceWorker';
 
 // Autoral components:
-import App from './App.js';
+import App from './containers/App.js';
 
 // Estilos para a página:
 import './index.css';
