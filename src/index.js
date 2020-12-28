@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'tachyons';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import 'tachyons'
+import * as serviceWorker from './serviceWorker'
 
 // Autoral components:
-import App from './containers/App.js';
+import App from './containers/App.js'
 
 // Estilos para a página:
-import './index.css';
+import './index.css'
 
 ReactDOM.render(
 
@@ -16,9 +16,9 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 
-);
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.unregister()

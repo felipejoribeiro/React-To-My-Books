@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const SearchBox = ({searchChange}) => {
-  return(
+const SearchBox = ({ searchChange }) => {
+  return (
     <div className='pa2'>
-      <input 
+      <input
         className='pa3 ba b--green bg-lightest-blue'
-        type='search' 
+        type='search'
         placeholder='search robots'
         onChange= {searchChange}
       />
@@ -13,4 +14,9 @@ const SearchBox = ({searchChange}) => {
   )
 }
 
-export default SearchBox;
+SearchBox.propTypes = {
+  children: PropTypes.node.isRequired,
+  searchChange: PropTypes.node
+}
+
+export default SearchBox
